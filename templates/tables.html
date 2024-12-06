@@ -1,0 +1,671 @@
+<!--
+=========================================================
+* Material Dashboard 3 - v3.2.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard
+* Copyright 2024 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../static/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../static/assets/img/favicon.png">
+  <title>
+    KYGnus RMS - Brain
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="../static/goole_fonts.css" />
+  <!-- Nucleo Icons -->
+  <link href="../static/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../static/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <!-- Material Icons -->
+  <link rel="stylesheet" href="../static/goolge_fonts2.css" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../static/assets/css/material-dashboard.css?v=3.2.0" rel="stylesheet" />
+</head>
+
+<body class="g-sidenav-show  bg-gray-100">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-radius-lg fixed-start ms-2  bg-white my-2" id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand px-4 py-3 m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
+        <img src="../static/openSUSE.png" class="navbar-brand-img" width="26" height="26" alt="main_logo">
+        <span class="ms-1 text-sm text-dark">openSUSE Medical</span>
+      </a>
+    </div>
+    <hr class="horizontal dark mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active bg-gradient-dark text-white" href="/">
+            <i class="material-symbols-rounded opacity-5">dashboard</i>
+            <span class="nav-link-text ms-1">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/brain_stroke_classifier">
+            <i class="material-symbols-rounded opacity-5">neurology</i>
+            <span class="nav-link-text ms-1">Stroke Detection</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/ms_classifier">
+            <i class="material-symbols-rounded opacity-5">neurology</i>
+            <span class="nav-link-text ms-1">MS Detection</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/brain_tumor_classifier">
+            <i class="material-symbols-rounded opacity-5">neurology</i>
+            <span class="nav-link-text ms-1">Brain Tumor Detection</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/parkinson_detection">
+            <i class="material-symbols-rounded opacity-5">neurology</i>
+            <span class="nav-link-text ms-1">Parkinson Detection ML</span>
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/dicom_viewer">
+            <i class="material-symbols-rounded opacity-5">photo_camera</i>
+            <span class="nav-link-text ms-1">Dicom Viewer</span>
+          </a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/tables">
+            <i class="material-symbols-rounded opacity-5">table_view</i>
+            <span class="nav-link-text ms-1">Tables</span>
+          </a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/about_us">
+            <i class="material-symbols-rounded opacity-5">account_circle</i>
+            <span class="nav-link-text ms-1">About US</span>
+          </a>
+        </li>
+
+
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-dark font-weight-bolder opacity-5">Account pages</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/logout">
+            <i class="material-symbols-rounded opacity-5">Logout</i>
+            <span class="nav-link-text ms-1">Logout</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+      <div class="mx-3">
+        <a class="btn btn-outline-dark mt-4 w-100" href="https://kooshayeganeh.github.io/" type="button">website</a>
+        <a class="btn bg-gradient-dark w-100" href="https://github.com/KooshaYeganeh/RMS-oral" type="button">App GitHub</a>
+      </div>
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-3 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">{{username}}</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+          </ol>
+        </nav>
+        
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-2">
+      <div class="row">
+        <div class="col-12">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Parkinson Data Sample</h6>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">MDVP:Fo(Hz)</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">MDVP:Fhi(Hz)</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">MDVP:Flo(Hz)</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">MDVP:Jitter(%)</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">MDVP:Jitter(Abs)</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">MDVP:RAP</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">MDVP:PPQ</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Jitter:DDP</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">MDVP:Shimmer</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">MDVP:Shimmer(dB)</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Shimmer:APQ3</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Shimmer:APQ5</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">MDVP:APQ</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Shimmer:DDA</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NHR</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">HNR</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">RPDE</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">DFA</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">spread1</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">spread2</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">D2</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">PPE</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                      <td>156.405</td>
+                      <td>189.398</td>
+                      <td>142.822</td>
+                      <td>0.00768</td>
+                      <td>0.00005</td>
+                      <td>0.00372</td>
+                      <td>0.00399</td>
+                      <td>0.01116</td>
+                      <td>0.03995</td>
+                      <td>0.348</td>
+                      <td>0.01721</td>
+                      <td>0.02374</td>
+                      <td>0.0431</td>
+                      <td>0.05164</td>
+                      <td>0.03365</td>
+                      <td>17.153</td>
+                      <td>0.649554</td>
+                      <td>0.68608</td>
+                      <td>-4.554466</td>
+                      <td>0.340176</td>
+                      <td>2.856676</td>
+                      <td>0.322111</td>
+                      <td>1</td>
+                  </tr>
+                  <tr>
+                      <td>153.848</td>
+                      <td>165.738</td>
+                      <td>65.782</td>
+                      <td>0.0084</td>
+                      <td>0.00005</td>
+                      <td>0.00428</td>
+                      <td>0.0045</td>
+                      <td>0.01285</td>
+                      <td>0.0381</td>
+                      <td>0.328</td>
+                      <td>0.01667</td>
+                      <td>0.02383</td>
+                      <td>0.04055</td>
+                      <td>0.05</td>
+                      <td>0.03871</td>
+                      <td>17.536</td>
+                      <td>0.660125</td>
+                      <td>0.704087</td>
+                      <td>-4.095442</td>
+                      <td>0.262564</td>
+                      <td>2.73971</td>
+                      <td>0.365391</td>
+                      <td>1</td>
+                  </tr>
+                  <tr>
+                      <td>153.88</td>
+                      <td>172.86</td>
+                      <td>78.128</td>
+                      <td>0.0048</td>
+                      <td>0.00003</td>
+                      <td>0.00232</td>
+                      <td>0.00267</td>
+                      <td>0.00696</td>
+                      <td>0.04137</td>
+                      <td>0.37</td>
+                      <td>0.02021</td>
+                      <td>0.02591</td>
+                      <td>0.04525</td>
+                      <td>0.06062</td>
+                      <td>0.01849</td>
+                      <td>19.493</td>
+                      <td>0.629017</td>
+                      <td>0.698951</td>
+                      <td>-5.18696</td>
+                      <td>0.237622</td>
+                      <td>2.557536</td>
+                      <td>0.259765</td>
+                      <td>1</td>
+                  </tr>
+                  <tr>
+                      <td>167.93</td>
+                      <td>193.221</td>
+                      <td>79.068</td>
+                      <td>0.00442</td>
+                      <td>0.00003</td>
+                      <td>0.0022</td>
+                      <td>0.00247</td>
+                      <td>0.00661</td>
+                      <td>0.04351</td>
+                      <td>0.377</td>
+                      <td>0.02228</td>
+                      <td>0.0254</td>
+                      <td>0.04246</td>
+                      <td>0.06685</td>
+                      <td>0.0128</td>
+                      <td>22.468</td>
+                      <td>0.61906</td>
+                      <td>0.679834</td>
+                      <td>-4.330956</td>
+                      <td>0.262384</td>
+                      <td>2.916777</td>
+                      <td>0.285695</td>
+                      <td>1</td>
+                  </tr>
+                  <tr>
+                      <td>173.917</td>
+                      <td>192.735</td>
+                      <td>86.18</td>
+                      <td>0.00476</td>
+                      <td>0.00003</td>
+                      <td>0.00221</td>
+                      <td>0.00258</td>
+                      <td>0.00663</td>
+                      <td>0.04192</td>
+                      <td>0.364</td>
+                      <td>0.02187</td>
+                      <td>0.0247</td>
+                      <td>0.03772</td>
+                      <td>0.06562</td>
+                      <td>0.0184</td>
+                      <td>20.422</td>
+                      <td>0.537264</td>
+                      <td>0.686894</td>
+                      <td>-5.248776</td>
+                      <td>0.210279</td>
+                      <td>2.547508</td>
+                      <td>0.253556</td>
+                      <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>156.405</td>
+                    <td>189.398</td>
+                    <td>142.822</td>
+                    <td>0.00768</td>
+                    <td>0.00005</td>
+                    <td>0.00372</td>
+                    <td>0.00399</td>
+                    <td>0.01116</td>
+                    <td>0.03995</td>
+                    <td>0.348</td>
+                    <td>0.01721</td>
+                    <td>0.02374</td>
+                    <td>0.0431</td>
+                    <td>0.05164</td>
+                    <td>0.03365</td>
+                    <td>17.153</td>
+                    <td>0.649554</td>
+                    <td>0.68608</td>
+                    <td>-4.554466</td>
+                    <td>0.340176</td>
+                    <td>2.856676</td>
+                    <td>0.322111</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>153.848</td>
+                    <td>165.738</td>
+                    <td>65.782</td>
+                    <td>0.0084</td>
+                    <td>0.00005</td>
+                    <td>0.00428</td>
+                    <td>0.0045</td>
+                    <td>0.01285</td>
+                    <td>0.0381</td>
+                    <td>0.328</td>
+                    <td>0.01667</td>
+                    <td>0.02383</td>
+                    <td>0.04055</td>
+                    <td>0.05</td>
+                    <td>0.03871</td>
+                    <td>17.536</td>
+                    <td>0.660125</td>
+                    <td>0.704087</td>
+                    <td>-4.095442</td>
+                    <td>0.262564</td>
+                    <td>2.73971</td>
+                    <td>0.365391</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>153.88</td>
+                    <td>172.86</td>
+                    <td>78.128</td>
+                    <td>0.0048</td>
+                    <td>0.00003</td>
+                    <td>0.00232</td>
+                    <td>0.00267</td>
+                    <td>0.00696</td>
+                    <td>0.04137</td>
+                    <td>0.37</td>
+                    <td>0.02021</td>
+                    <td>0.02591</td>
+                    <td>0.04525</td>
+                    <td>0.06062</td>
+                    <td>0.01849</td>
+                    <td>19.493</td>
+                    <td>0.629017</td>
+                    <td>0.698951</td>
+                    <td>-5.18696</td>
+                    <td>0.237622</td>
+                    <td>2.557536</td>
+                    <td>0.259765</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>167.93</td>
+                    <td>193.221</td>
+                    <td>79.068</td>
+                    <td>0.00442</td>
+                    <td>0.00003</td>
+                    <td>0.0022</td>
+                    <td>0.00247</td>
+                    <td>0.00661</td>
+                    <td>0.04351</td>
+                    <td>0.377</td>
+                    <td>0.02228</td>
+                    <td>0.0254</td>
+                    <td>0.04246</td>
+                    <td>0.06685</td>
+                    <td>0.0128</td>
+                    <td>22.468</td>
+                    <td>0.61906</td>
+                    <td>0.679834</td>
+                    <td>-4.330956</td>
+                    <td>0.262384</td>
+                    <td>2.916777</td>
+                    <td>0.285695</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>173.917</td>
+                    <td>192.735</td>
+                    <td>86.18</td>
+                    <td>0.00476</td>
+                    <td>0.00003</td>
+                    <td>0.00221</td>
+                    <td>0.00258</td>
+                    <td>0.00663</td>
+                    <td>0.04192</td>
+                    <td>0.364</td>
+                    <td>0.02187</td>
+                    <td>0.0247</td>
+                    <td>0.03772</td>
+                    <td>0.06562</td>
+                    <td>0.0184</td>
+                    <td>20.422</td>
+                    <td>0.537264</td>
+                    <td>0.686894</td>
+                    <td>-5.248776</td>
+                    <td>0.210279</td>
+                    <td>2.547508</td>
+                    <td>0.253556</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>245.51</td>
+                    <td>262.09</td>
+                    <td>231.848</td>
+                    <td>0.00235</td>
+                    <td>0.00001</td>
+                    <td>0.00127</td>
+                    <td>0.00148</td>
+                    <td>0.0038</td>
+                    <td>0.01608</td>
+                    <td>0.141</td>
+                    <td>0.00906</td>
+                    <td>0.00977</td>
+                    <td>0.01149</td>
+                    <td>0.02719</td>
+                    <td>0.00476</td>
+                    <td>24.602</td>
+                    <td>0.467489</td>
+                    <td>0.631653</td>
+                    <td>-7.156076</td>
+                    <td>0.127642</td>
+                    <td>2.392122</td>
+                    <td>0.097336</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>252.455</td>
+                    <td>261.487</td>
+                    <td>182.786</td>
+                    <td>0.00185</td>
+                    <td>0.000007</td>
+                    <td>0.00092</td>
+                    <td>0.00113</td>
+                    <td>0.00276</td>
+                    <td>0.01152</td>
+                    <td>0.103</td>
+                    <td>0.00614</td>
+                    <td>0.0073</td>
+                    <td>0.0086</td>
+                    <td>0.01841</td>
+                    <td>0.00432</td>
+                    <td>26.805</td>
+                    <td>0.610367</td>
+                    <td>0.635204</td>
+                    <td>-7.31951</td>
+                    <td>0.200873</td>
+                    <td>2.028612</td>
+                    <td>0.086398</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>122.188</td>
+                    <td>128.611</td>
+                    <td>115.765</td>
+                    <td>0.00524</td>
+                    <td>0.00004</td>
+                    <td>0.00169</td>
+                    <td>0.00203</td>
+                    <td>0.00507</td>
+                    <td>0.01613</td>
+                    <td>0.143</td>
+                    <td>0.00855</td>
+                    <td>0.00776</td>
+                    <td>0.01433</td>
+                    <td>0.02566</td>
+                    <td>0.00839</td>
+                    <td>23.162</td>
+                    <td>0.579597</td>
+                    <td>0.733659</td>
+                    <td>-6.439398</td>
+                    <td>0.266392</td>
+                    <td>2.079922</td>
+                    <td>0.133867</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>122.964</td>
+                    <td>130.049</td>
+                    <td>114.676</td>
+                    <td>0.00428</td>
+                    <td>0.00003</td>
+                    <td>0.00124</td>
+                    <td>0.00155</td>
+                    <td>0.00373</td>
+                    <td>0.01681</td>
+                    <td>0.154</td>
+                    <td>0.0093</td>
+                    <td>0.00802</td>
+                    <td>0.014</td>
+                    <td>0.02789</td>
+                    <td>0.00462</td>
+                    <td>24.971</td>
+                    <td>0.538688</td>
+                    <td>0.754073</td>
+                    <td>-6.482096</td>
+                    <td>0.264967</td>
+                    <td>2.054419</td>
+                    <td>0.128872</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>124.445</td>
+                    <td>135.069</td>
+                    <td>117.495</td>
+                    <td>0.00431</td>
+                    <td>0.00003</td>
+                    <td>0.00141</td>
+                    <td>0.00167</td>
+                    <td>0.00422</td>
+                    <td>0.02184</td>
+                    <td>0.197</td>
+                    <td>0.01241</td>
+                    <td>0.01024</td>
+                    <td>0.01685</td>
+                    <td>0.03724</td>
+                    <td>0.00479</td>
+                    <td>25.135</td>
+                    <td>0.553134</td>
+                    <td>0.775933</td>
+                    <td>-6.650471</td>
+                    <td>0.254498</td>
+                    <td>1.840198</td>
+                    <td>0.103561</td>
+                    <td>0</td>
+                </tr>
+              </tbody>
+              </table>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer py-4  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>,
+                made with <i class="fa fa-heart"></i> by
+                <a href="https://kooshayeganeh.github.io" class="font-weight-bold" target="_blank">KYGnus</a>
+                To have a better world with free software 
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                <li class="nav-item">
+                  <a href="https://github.com/KooshaYeganeh" class="nav-link text-muted" target="_blank">GitHub</a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://gitlab.com/KooshaYeganeh" class="nav-link text-muted" target="_blank">GitLab</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <div class="fixed-plugin">
+    <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
+      <i class="material-symbols-rounded py-2">settings</i>
+    </a>
+    <div class="card shadow-lg">
+      <div class="card-header pb-0 pt-3">
+        <div class="float-start">
+          <h5 class="mt-3 mb-0">UI Configurator</h5>
+          <img src="../static/suse-dash.png" alt="" height="200" width="200">
+        </div>
+        <div class="float-end mt-4">
+          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
+            <i class="material-symbols-rounded">clear</i>
+          </button>
+        </div>
+        <!-- End Toggle Button -->
+      </div>
+      <hr class="horizontal dark my-1">
+      <div class="card-body pt-sm-3 pt-0">
+        <!-- Sidebar Backgrounds -->
+        <div>
+          <h6 class="mb-0">Sidebar Colors</h6>
+        </div>
+        <a href="javascript:void(0)" class="switch-trigger background-color">
+          <div class="badge-colors my-2 text-start">
+            <span class="badge filter bg-gradient-primary" data-color="primary" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-dark active" data-color="dark" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
+          </div>
+        </a>
+        <!-- Sidenav Type -->
+        <div class="mt-3">
+          <h6 class="mb-0">Sidenav Type</h6>
+          <p class="text-sm">Choose between different sidenav types.</p>
+        </div>
+        <div class="d-flex">
+          <button class="btn bg-gradient-dark px-3 mb-2" data-class="bg-gradient-dark" onclick="sidebarType(this)">Dark</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent" onclick="sidebarType(this)">Transparent</button>
+          <button class="btn bg-gradient-dark px-3 mb-2  active ms-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
+        </div>
+        <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
+        <!-- Navbar Fixed -->
+        <div class="mt-3 d-flex">
+          <h6 class="mb-0">Navbar Fixed</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
+          </div>
+        </div>
+        <hr class="horizontal dark my-3">
+        <div class="mt-2 d-flex">
+          <h6 class="mb-0">Light / Dark</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../static/assets/js/core/popper.min.js"></script>
+  <script src="../static/assets/js/core/bootstrap.min.js"></script>
+  <script src="../static/assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../static/assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="../static/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../static/assets/js/material-dashboard.min.js?v=3.2.0"></script>
+</body>
+
+</html>
