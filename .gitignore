@@ -134,4 +134,5 @@ mysql_test.py
 *.swp
 *.pth
 *.pkl
+uploads/
 
